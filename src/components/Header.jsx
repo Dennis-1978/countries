@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {useSelector, useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 import {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { IoMoon, IoMoonOutline } from 'react-icons/io5';
@@ -19,9 +19,7 @@ const Wrapper = styled.div`
   padding: 2rem 0;
 `;
 
-const Title = styled(Link).attrs({
-  to: '/',
-})`
+const Title = styled(Link).attrs({to: '/',})`
   color: var(--colors-text);
   font-size: var(--fs-sm);
   text-decoration: none;
@@ -36,11 +34,16 @@ const ModeSwitcher = styled.div`
 `;
 
 export const Header = () => {
+
   const dispatch = useDispatch();
   const theme = useSelector(state => state.theme);
 
-  const toggleTheme = () => dispatch(setTheme(theme === 'light' ? 'dark' : 'light'))
-
+  const toggleTheme = () => dispatch(setTheme(
+    theme === 'light' 
+    ? 'dark' 
+    : 'light'
+  ));
+  
   useEffect(() => {
     document.body.setAttribute('data-theme', theme);
   }, [theme]);

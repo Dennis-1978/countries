@@ -5,10 +5,10 @@ import thunk from 'redux-thunk';
 import { rootReducer } from './root-reducer';
 import * as api from '../config';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENTION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export const store = createStore(
-    rootReducer,
+    rootReducer, 
     composeEnhancers(
         applyMiddleware(
             thunk.withExtraArgument({
