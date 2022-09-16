@@ -29,8 +29,8 @@ const Title = styled(Link).attrs({to: '/',})`
 const ModeSwitcher = styled.div`
   color: var(--colors-text);
   font-size: var(--fs-sm);
-  cursor: pointer;
   text-transform: capitalize;
+  cursor: pointer;
 `;
 
 export const Header = () => {
