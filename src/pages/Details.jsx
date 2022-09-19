@@ -13,7 +13,8 @@ export const Details = () => {
   const { name } = useParams();
   const {currentCountry, error, status} = useSelector(selectDetails);
   const dispatch = useDispatch();
-  console.log(name);
+
+  console.log(currentCountry);
 
   const navigate = useNavigate();
 
